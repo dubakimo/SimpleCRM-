@@ -22,6 +22,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Microsoft.OpenApi.Models;
 
 namespace Fonour.MVC
 {
@@ -60,6 +61,13 @@ namespace Fonour.MVC
 
             //AutoMapper
             services.AddAutoMapper(typeof(FonourMappingProfile));
+
+            // 添加Swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API Demo", Version = "v1" });
+            });
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -78,6 +86,13 @@ namespace Fonour.MVC
                 //生产环境异常处理
                 app.UseExceptionHandler("/Shared/Error");
             }
+
+            // 添加Swagger有关中间件
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Demo v1");
+            });
 
             //使用静态文件
             app.UseStaticFiles();
