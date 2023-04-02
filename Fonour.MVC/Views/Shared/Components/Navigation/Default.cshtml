@@ -1,0 +1,7 @@
+﻿@model List<Fonour.Application.MenuApp.Dtos.MenuDto>
+<li class="header">權限管理</li>
+@foreach (var menu in Model)
+{
+    var isActive = ViewBag.CurrentMenu == menu.Code; //判斷當前功能是否處於初始化狀態
+    <li class="@(isActive ? "active" : "")"><a href="@menu.Url"><i class="fa fa-link"></i> <span>@menu.Name</span></a></li>
+}
