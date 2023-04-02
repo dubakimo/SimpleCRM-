@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Fonour.MVC</name>
+    </assembly>
+    <members>
+        <member name="M:Fonour.MVC.Common.Extensions.EnumExtension.GetDescription(System.Enum,System.Boolean)">
+            <summary>
+            擴展方法，獲得枚舉的Description
+            </summary>
+            <param name="value">枚舉值</param>
+            <param name="nameInstead">當枚舉值沒有定義DescriptionAttribute，是否使用枚舉名代替，默認是使用</param>
+            <returns>枚舉的Description</returns>
+        </member>
+        <member name="M:Fonour.MVC.Common.Extensions.EnumExtension.EnumToDictionary(System.Type,System.Func{System.Enum,System.String})">
+            <summary>
+            把枚舉轉換為鍵值對集合
+            </summary>
+            <param name="enumType">枚舉類型</param>
+            <param name="getText">以Enum為參數類型，String為返回類型的委托</param>
+            <returns>以枚舉值為key，枚舉文本為value的鍵值對集合</returns>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.DepartmentController.GetTreeData">
+            <summary>
+            獲取功能樹JSON數據
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.DepartmentController.GetChildrenByParent(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            獲取子級列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.DepartmentController.Edit(Fonour.Application.DepartmentApp.Dtos.DepartmentDto)">
+            <summary>
+            新增或編輯功能
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.FonourControllerBase.GetModelStateError">
+            <summary>
+            獲取服務端驗證的第一條錯誤信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Fonour.MVC.Controllers.MenuController">
+            <summary>
+            功能管理控制器
+            </summary>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.MenuController.GetMenuTreeData">
+            <summary>
+            獲取功能樹JSON數據
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.MenuController.GetMenusByParent(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            獲取子級功能列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.MenuController.Edit(Fonour.Application.MenuApp.Dtos.MenuDto)">
+            <summary>
+            新增或編輯功能
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.RoleController.Edit(Fonour.Application.RoleApp.Dtos.RoleDto)">
+            <summary>
+            新增或編輯功能
+            </summary>
+            <param name="dto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.RoleController.GetMenusByRole(System.Guid)">
+            <summary>
+            根據角色獲取權限
+            </summary>
+            <returns></returns>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Fonour.MVC.Controllers.StudentController.Get" -->
+        <member name="M:Fonour.MVC.Controllers.StudentController.Post">
+            <summary>
+            新增學生
+            </summary>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.StudentController.Put">
+            <summary>
+            修改學生訊息
+            </summary>
+        </member>
+        <member name="M:Fonour.MVC.Controllers.StudentController.Delete">
+            <summary>
+            刪除學生訊息
+            </summary>
+        </member>
+    </members>
+</doc>
